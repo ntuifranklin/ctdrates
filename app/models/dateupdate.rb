@@ -1,0 +1,2 @@
+class Dateupdate < ApplicationRecord
+end
