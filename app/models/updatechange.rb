@@ -5,5 +5,5 @@ class Updatechange < ApplicationRecord
   belongs_to :shipline
   belongs_to :pol
   belongs_to :pod
-  belongs_to :rateitem
+  belongs_to :updatechange
 end

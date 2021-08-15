@@ -1,7 +1,7 @@
 #!/bin/bash
 # This scripts starts the rails app  production server
 
-echo "precompiling everything for production environment"
+echo "precompiling everything for development environment"
 RAILS_ENV=development rails assets:precompile
 RAILS_ENV=development rake db:reset db:migrate db:seed
 

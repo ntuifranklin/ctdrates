@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_04_030647) do
+ActiveRecord::Schema.define(version: 2021_08_05_214559) do
 
   create_table "admins", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
@@ -45,6 +45,18 @@ ActiveRecord::Schema.define(version: 2021_08_04_030647) do
 
   create_table "countries", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "dateupdates", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "datetime"
+    t.string "hour"
+    t.string "minute"
+    t.string "second"
+    t.string "day"
+    t.string "month"
+    t.string "year"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -113,7 +125,7 @@ ActiveRecord::Schema.define(version: 2021_08_04_030647) do
     t.bigint "shipline_id", null: false
     t.bigint "pol_id", null: false
     t.bigint "pod_id", null: false
-    t.bigint "updatechanges_id", null: false
+    t.bigint "updatechange_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["admin_id"], name: "index_updatechanges_on_admin_id"
@@ -122,7 +134,7 @@ ActiveRecord::Schema.define(version: 2021_08_04_030647) do
     t.index ["pol_id"], name: "index_updatechanges_on_pol_id"
     t.index ["shipline_id"], name: "index_updatechanges_on_shipline_id"
     t.index ["tag_id"], name: "index_updatechanges_on_tag_id"
-    t.index ["updatechanges_id"], name: "index_updatechanges_on_updatechanges_id"
+    t.index ["updatechange_id"], name: "index_updatechanges_on_updatechange_id"
   end
 
   add_foreign_key "categories", "containers"
@@ -141,5 +153,5 @@ ActiveRecord::Schema.define(version: 2021_08_04_030647) do
   add_foreign_key "updatechanges", "pols"
   add_foreign_key "updatechanges", "shiplines"
   add_foreign_key "updatechanges", "tags"
-  add_foreign_key "updatechanges", "updatechanges", column: "updatechanges_id"
+  add_foreign_key "updatechanges", "updatechanges"
 end

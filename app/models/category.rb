@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
-  has_one :roro
-  has_one :container
+  belongs_to :roro
+  belongs_to :container
 end
