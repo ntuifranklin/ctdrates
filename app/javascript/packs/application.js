@@ -17,7 +17,7 @@ require("bootstrap")
 //import "packs/js/popper.min"
 //import "packs/js/bootstrap"
 window.jQuery = window.$ = jQuery;
-console.log("Jquery was loaded maybe ?")
+console.log("Jquery was loaded maybe!")
 require("aos")
 //require("packs/js/popper.min")
 //require("packs/js/bootstrap")
