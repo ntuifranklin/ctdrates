@@ -1,7 +1,7 @@
 #!/bin/bash
 # This scripts starts the rails app  production server
-chmod -R 777 app/javascript/packs
-sleep 2
+chmod -R 777 app/javascript/packs/*
+sleep 3
 echo "precompiling everything for production environment"
 rake assets:precompile RAILS_ENV=production
 sleep 1
