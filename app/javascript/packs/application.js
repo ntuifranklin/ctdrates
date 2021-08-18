@@ -7,7 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require("jquery.min")
+require("jquery")
 //import "bootstrap"
 //require("packs/js/jquery.min")
 require("popper.min")
